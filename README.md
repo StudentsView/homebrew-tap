@@ -1,13 +1,14 @@
 # HanX Homebrew tap
 
-로컬 AI 에이전트가 엑셀 파일을 읽고 수정하고 수식을 계산하도록 HanX CLI를 설치합니다. macOS 13 이상에서 Apple Silicon과 Intel을 지원합니다. Node.js는 필요하지 않습니다.
+로컬 AI 에이전트가 엑셀 파일을 읽고 수정하고 수식을 계산하도록 HanX CLI를 설치합니다. macOS 13 이상에서 Apple Silicon과 Intel, Linux에서는 Ubuntu 22.04 이상 x64를 지원합니다. 설정 실행기에 Node.js를 사용하며 Homebrew가 함께 준비합니다.
 
 ## Homebrew 설치
 
-Homebrew가 설치된 Mac에서 실행합니다.
+Homebrew가 설치된 macOS 또는 Linux에서 실행합니다.
 
 ```sh
 brew install StudentsView/tap/hanx
+hanx setup
 ```
 
 ## 설치 확인
@@ -30,6 +31,7 @@ Homebrew 대신 npm을 사용할 수도 있습니다. Node.js 18 이상이 필�
 
 ```sh
 npm install -g @juyoungsuh/hanx
+hanx setup
 ```
 
 [공개 npm 패키지](https://www.npmjs.com/package/@juyoungsuh/hanx)에서 버전을 확인하세요.
@@ -38,6 +40,4 @@ npm install -g @juyoungsuh/hanx
 
 [CLI 안내](https://github.com/StudentsView/HanX/blob/main/docs/cli/README.md)에 엑셀 수식과 파일 편집 및 MCP 연결 방법이 있습니다.
 
-원본 배포 파일은 [HanX Releases](https://github.com/StudentsView/HanX/releases)에서 가져오며 SHA256을 확인합니다. 네이티브 실행 파일과 JSON/MCP 문서 도구만 설치합니다. GUI 앱은 원본 저장소의 pkg를 이용하세요.
-
-본 제품은 한컴의 HWP 문서 파일(.hwp) 공개 문서를 참고하여 개발하였습니다.
+원본 배포 파일은 [HanX Releases](https://github.com/StudentsView/HanX/releases)에서 가져오며 SHA256을 확인합니다. 설치 후 방향키와 Enter로 GUI만, CLI만, 둘 다를 선택합니다. 자동 설치에는 `hanx setup --components all --yes`를 사용하세요. GUI만 선택해도 작은 설정 실행기는 유지하며 앱은 내부 문서 엔진을 사용합니다. Windows에서는 npm 또는 원본 저장소의 Setup.exe를 사용하세요.
